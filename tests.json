@@ -1,4 +1,5 @@
 {
 	"tests": [
+		["iframePropertyToggle", "IFrame visibility property can be set but any subsequent updates do not cause a change."]
 	]
 }

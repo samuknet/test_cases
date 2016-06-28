@@ -34,7 +34,7 @@ window.addEventListener('load', function() {
 
     function onTestsLoaded(e) {
         var response = this.response;
-        
+        console.log(response);
         if(!response || !(response.tests)) {
             onTestsLoadError(new Error('No tests found'));
             return;

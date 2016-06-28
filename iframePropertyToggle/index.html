@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFrame Opacity Test</title>
+
+    <style>
+        body {
+            font-family: arial;
+        }
+        .dormant {
+            opacity: 0.6;
+        }
+        .active {
+            opacity: 1;
+        }
+
+    </style>
+
+    <script defer>
+        // Expecting to see a flashing IFrame which periodically appears and then re-appears
+        window.addEventListener('DOMContentLoaded', function() {
+            var fr = document.querySelector('#f');
+
+            toggleProperty(); // This call works and causes a change
+            setInterval(toggleProperty, 1000);
+
+            function toggleProperty() {
+                // Issue present at least with visibility and opacity
+
+                fr.style.visibility = fr.style.visibility === 'hidden' ? 'visible' : 'hidden' ;
+
+                // fr.className = fr.className === 'dormant' ? 'active' : 'dormant';
+
+                
+            }
+
+        });
+
+    </script>
+</head>
+<body>
+    <p>IFrame visibility/opacity properties do not update dynamically. The property can successfully be set initially but any subsequent updates do not cause a change.</p> 
+
+    <p>
+     Expecting to see a flashing IFrame which periodically appears and then re-appears
+    </p>
+    <!-- Everyting works successfully when using a div, the problem appears to be specific to IFrames !-->
+    <!-- <div id="f"><h1>Hello World</h1></div> -->
+    <iframe id="f" src="http://wikipedia.org"></iframe>
+</body>
+</html>
+
+
