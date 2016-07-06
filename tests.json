@@ -1,6 +1,6 @@
 {
 	"tests": [
-		["iframePropertyToggle", "IFrame visibility property can be set but any subsequent asynchornous updates do not cause a change."],
-		["iframeCSSRotate", "IFrame CSS rotation transform displaying improperly."]
+		["iframePropertyToggle", "IFrame visibility property can be set but any subsequent asynchronous updates do not cause a change.", "https://github.com/servo/servo/issues/11891"],
+		["iframeCSSRotate", "IFrame CSS rotation transform displaying improperly.", "https://github.com/servo/servo/issues/12286"]
 	]
 }
