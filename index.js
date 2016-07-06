@@ -21,7 +21,7 @@ window.addEventListener('load', function() {
         link.href = title;
         link.textContent = title;
         githubLink.href = githubIssueURL;
-        githubLink.textContent = 'Github Issue';
+        githubLink.textContent = 'GitHub Issue';
 
         var linkTD = document.createElement('td');
         linkTD.appendChild(link);
