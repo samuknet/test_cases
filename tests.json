@@ -1,5 +1,6 @@
 {
 	"tests": [
-		["iframePropertyToggle", "IFrame visibility property can be set but any subsequent updates do not cause a change."]
+		["iframePropertyToggle", "IFrame visibility property can be set but any subsequent asynchornous updates do not cause a change."],
+		["iframeCSSRotate", "IFrame CSS rotation transform displaying improperly."]
 	]
 }
