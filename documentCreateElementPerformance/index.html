@@ -14,8 +14,9 @@
         <script>
         function test() {
             var then = performance.now();
+            var str = 'div';
             for (var i = 0; i < 1000; i++) {
-            document.createElement('div');
+            document.createElement(str);
             }
 
             return performance.now() - then;
