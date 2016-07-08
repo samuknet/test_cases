@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Performance of document.createElement</title>
+
+        <style>
+            body {
+                font-family: arial;
+            }
+        </style>
+
+        <script>
+        function test() {
+            var then = performance.now();
+            for (var i = 0; i < 1000; i++) {
+            document.createElement('div');
+            }
+
+            return performance.now() - then;
+        }
+    
+        // Run test 1000 times and average;
+        var times = [];
+        for (var i = 0; i < 1000; i++) { 
+            times.push(test());
+        }
+        console.log(times.reduce((acc, n) => acc + n) / times.length);
+        </script>
+    </head>
+    <body>
+        <p>
+            See console output for average time take to create 1000 div elements using document.createElement('div').
+            Run in FF/Chrome and then Servo - Servo seems to take much longer.
+        </p>
+
+    </body>
+</html>

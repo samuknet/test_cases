@@ -1,6 +1,7 @@
 {
 	"tests": [
 		["iframePropertyToggle", "IFrame visibility property can be set but any subsequent asynchronous updates do not cause a change.", "https://github.com/servo/servo/issues/11891"],
-		["iframeCSSRotate", "IFrame CSS rotation transform displaying improperly.", "https://github.com/servo/servo/issues/12286"]
+		["iframeCSSRotate", "IFrame CSS rotation transform displaying improperly.", "https://github.com/servo/servo/issues/12286"],
+		["documentCreateElementPerformance", "Performance of document.createElement very slow compared to FF/Chrome.", "https://github.com/servo/servo/issues/6906"]
 	]
 }
