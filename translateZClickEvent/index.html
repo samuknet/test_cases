@@ -3,9 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click event firing when DIV not visible from translateZ</title>
+    <title>Click event erroneously firing when div not visible from translateZ</title>
 
-    
     <style>
         body {
             margin: 0;
@@ -27,7 +26,7 @@
     Clicking anywhere on page fires the click event on the DIV in Servo, even though the div is not visible due to a CSS translateZ transform.
     </p>
 
-    <p>The click event does not fire in FF/Chrome</p>
+    <p>The click event does not fire in FF/Chrome.</p>
     <div></div>
 
     <script>
