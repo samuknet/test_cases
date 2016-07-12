@@ -2,7 +2,7 @@
     "tests": [
         ["iframePropertyToggle", "IFrame visibility property can be set but any subsequent asynchronous updates do not cause a change.", "https://github.com/servo/servo/issues/11891"],
         ["iframeCSSRotate", "IFrame CSS rotation transform displaying improperly.", "https://github.com/servo/servo/issues/12286"],
-        ["documentCreateElementPerformance", "Performance of document.createElement very slow compared to FF/Chrome.", "https://github.com/servo/servo/issues/6906"]
-        ["translateZClickEvent", "Click event fires on div even when not visible due to a CSS translateZ transform."]    
+        ["documentCreateElementPerformance", "Performance of document.createElement very slow compared to FF/Chrome.", "https://github.com/servo/servo/issues/6906"],
+        ["translateZClickEvent", "Click event erroneously fires on div when not visible due to a CSS translateZ transform.", "https://github.com/servo/servo/issues/12411"]    
     ]
 }
