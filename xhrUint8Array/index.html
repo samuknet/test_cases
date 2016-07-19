@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: arial;
+        }
+    </style>
+    <script>
+    var oReq = new XMLHttpRequest();
+    oReq.open('GET', 'https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png', true);
+    oReq.responseType = 'arraybuffer';
+
+    oReq.onload = function (oEvent) {
+        var aBuffer = oReq.response; // This response appears to be valid image data
+        var byteArray = new Uint8Array(aBuffer); // This line causes 'invalid arguments' error to occur
+    };
+
+    oReq.send(null);  
+    </script>
+
+</head>
+
+<body>
+<p>Servo gives an 'invalid arguments' error when trying to create a Uint8Array from an XMLHTTPRequest with response type set to 'arraybuffer'.</p>
+</body>
