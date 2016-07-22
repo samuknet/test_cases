@@ -4,7 +4,7 @@
         ["iframeCSSRotate", "IFrame CSS rotation transform displaying improperly.", "https://github.com/servo/servo/issues/12286"],
         ["documentCreateElementPerformance", "Performance of document.createElement very slow compared to FF/Chrome.", "https://github.com/servo/servo/issues/6906"],
         ["translateZClickEvent", "Click event erroneously fires on div when not visible due to a CSS translateZ transform.", "https://github.com/servo/servo/issues/12411"],
-        ["iframeWidthReset", "Width of container with IFrame inside resets when a link in the IFrame is clicked", ""]  
+        ["iframeWidthReset", "Width of container with IFrame inside resets when a link in the IFrame is clicked", "https://github.com/servo/servo/issues/12554"]  
     	
     ]
 }
