@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style>
+		body {
+            margin: 0;
+            padding: 0;
+            font-family: helvetica;
+        }
+
+        .iframe-container {
+            width: 120px;
+            height: 80vh;
+            background-color: #DD545C;
+            transition: width 2s ease-in-out; /* Commenting out this transition property stops the issue occuring*/
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+         }
+
+         #desc {
+         	height: 20vh;
+         	border: 1px solid black;
+         }
+	</style>
+	<script>
+		window.addEventListener('load', function() {
+			var container = document.querySelector('.iframe-container');
+			container.style.width = '100vw';
+		});
+	</script>
+</head>
+
+<body>
+<article class="iframe-container">
+        <iframe src="https://en.wikipedia.org/wiki/Servo_(layout_engine)"></iframe>
+</article>
+
+<div id="desc">
+<p>
+Here we have an IFrame in a container 'strip'.  The IFrame is styled to have a width and height of 100% of the container.
+</p>
+
+<p>
+When the page loads, JavaScript expands the container width to 100vw.  The issue occurs whens clicking a link inside the IFrame.  This causes the parent container to unexpectedly revert to the original width, 'resetting' the width property that had been applied with JavaScript.
+</p>
+
+<p>
+The parent container has a CSS transition on the width property so that the initial change of width to 100vw is animated.  Crucially, removing this CSS transition stops the container collapsing when clicking a link in the IFrame, suggesting that the issue is related to the transition property.
+</p>
+</div>
+</body>
+</html>
