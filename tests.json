@@ -6,6 +6,7 @@
 		["xhrUint8Array", "Invalid arguments error when trying to create a Uint8Array from an XMLHTTPRequest with response type set to 'arraybuffer'.", "https://github.com/servo/servo/issues/12503"],	
 		["translateZClickEvent", "Click event erroneously fires on div when not visible due to a CSS translateZ transform.", "https://github.com/servo/servo/issues/12411"],
         ["iframeWidthReset", "Width of container with IFrame inside resets when a link in the IFrame is clicked", "https://github.com/servo/servo/issues/12554"],  
-		["anchorInPage", "Links to an anchor on same page not working", "https://github.com/servo/servo/issues/12587"]
+		["anchorInPage", "Links to an anchor identified by name attribute on same page not working", "https://github.com/servo/servo/issues/12587"]
+		["anchorInPageID", "Links to an anchor identified by id attribute on same page not working", ""]
 	]
 }
