@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+	font-family: helvetica;
+}
+img {
+	opacity: 0.5; /* Opacity must be set to anything other than 1 for the white rectangle to appear */
+}
+
+img:hover {
+	opacity: 1;
+	/*border: 5px solid red; */ /* Adding something like this makes the image display as expected on hover
+}
+</style>
+</head>
+
+<body>
+
+<img src="../servo.png" />
+<p>Hovering over the image should set the opacity to full, however nothing happens.  Adding a property such as 'border' onto the :hover CSS rule makes the opacity change on hover as expected.</p>
+</body>
+</html>
