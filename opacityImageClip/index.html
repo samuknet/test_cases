@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+	font-family: arial;
+	text-align: center;
+}
+
+img {
+	opacity: 0.9; /* Opacity must be set to anything other than 1 for the white rectangle to appear */
+}
+
+p {
+	text-align: initial;
+}
+</style>
+</head>
+
+<body>
+<p>
+The issue occurs when there is a text input near an image and the text input is 'filled up' with characters.  As soon as the text input overflows a white rectangle clips the corner of the image. This happens as soon as the text field has a character entered that makes it's size too small to display all the characters.
+</p>
+
+<p>
+The issue only occurs when the image has a CSS property set to anything other than 1. Also, the issue occurs when the image is close enough to the text input.
+ </p>
+
+<img src="../servo.png" />
+<input type="text" size="35" value="One character over the size causes the issue" /> <!-- Removing characters so that the text input is not filled up stops the issue. !-->
+
+</body>
+</html>

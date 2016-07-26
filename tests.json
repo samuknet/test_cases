@@ -7,6 +7,7 @@
 		["translateZClickEvent", "Click event erroneously fires on div when not visible due to a CSS translateZ transform.", "https://github.com/servo/servo/issues/12411"],
         ["iframeWidthReset", "Width of container with IFrame inside resets when a link in the IFrame is clicked", "https://github.com/servo/servo/issues/12554"],  
 		["anchorInPage", "Links to an anchor identified by name attribute on same page not working", "https://github.com/servo/servo/issues/12587"],
-		["anchorInPageID", "Links to an anchor identified by id attribute on same page not working", "https://github.com/servo/servo/issues/12590"]
+		["anchorInPageID", "Links to an anchor identified by id attribute on same page not working", "https://github.com/servo/servo/issues/12590"],
+		["opacityImageClip", "Image with opacity gets clipped when nearby text input 'overflows' with characters", ""]
 	]
 }
