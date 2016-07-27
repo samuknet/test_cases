@@ -2,7 +2,7 @@
 	"tests": [
 		["iframePropertyToggle", "IFrame visibility property can be set but any subsequent asynchronous updates do not cause a change.", "https://github.com/servo/servo/issues/11891"],
 		["iframeCSSRotate", "IFrame CSS rotation transform displaying improperly.", "https://github.com/servo/servo/issues/12286"],
-		["documentCreateElementPerformance", "Performance of document.createElement very slow compared to FF/Chrome.", "https://github.com/servo/servo/issues/12354"],
+		["documentCreateElementPerformance", "Performance of document.createElement very slow compared to FF/Chrome.", "https://github.com/servo/servo/issues/12354g"],
 		["xhrUint8Array", "Invalid arguments error when trying to create a Uint8Array from an XMLHTTPRequest with response type set to 'arraybuffer'.", "https://github.com/servo/servo/issues/12503"],	
 		["translateZClickEvent", "Click event erroneously fires on div when not visible due to a CSS translateZ transform.", "https://github.com/servo/servo/issues/12411"],
         ["iframeWidthReset", "Width of container with IFrame inside resets when a link in the IFrame is clicked", "https://github.com/servo/servo/issues/12554"],  
