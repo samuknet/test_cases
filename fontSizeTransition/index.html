@@ -9,18 +9,21 @@ body {
     font-family: helvetica;
 }
 div {
-    transition: 1s font-size ease-in-out;    
+    transition: 1.5s font-size ease-in-out;    
 }
 </style>
 
 <script>
 window.addEventListener('load', function() {
+	var d = document.querySelector('div');
     var large = false;
-    setInterval(() => {
-        large = !large;
-        document.querySelector('div').style.fontSize = large ? '500%' : '100%';
-    }, 1000);
-    
+    var interval = 1000; // Rest time inbetween transitions
+ 	toggle();
+ 	function toggle() {
+ 		large = !large;
+        d.style.fontSize = large ? '500%' : '100%';
+        setTimeout(toggle, 1500 + interval);
+ 	};
 });
 </script>
 
@@ -29,5 +32,4 @@ window.addEventListener('load', function() {
 I should be transitioning between large font size and back repeatedly.
 </div>
 </body>
-
 </html>
