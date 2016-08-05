@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click event erroneously firing when div not visible from translateZ</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: arial
+        }
+        div {
+            border: 1px solid black;
+            width: 100vw;
+            height: 100vh;
+            background-color:#83D0FC;
+            transform: perspective(500px) translateZ(500px);
+        }
+    </style>
+</head>
+<body>
+    <p>
+    Clicking anywhere on page fires the click event on the DIV in Servo, even though the div is not visible due to a CSS translateZ transform.
+    </p>
+
+    <p>The click event does not fire in FF/Chrome.</p>
+    <div></div>
+
+    <script>
+        document.querySelector('div').addEventListener('click', function() {
+            console.log('Event firing when div not visible on page');
+        });
+    </script>
+</body>
+</html>
