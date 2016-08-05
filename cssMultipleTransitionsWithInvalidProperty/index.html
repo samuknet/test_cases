@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+}
+
+div {
+	/* BELLOW IS THE OFFENDING LINE OF CSS */
+	/* 
+	When supplying multiple properties to transition, the presence of _one_ unrecognised property in the list
+	causes all of the other properties not to work in Servo.  
+
+	This means that with the below transition, the width won't be
+	transitioned as there is the erroneous 'non-existent-property' also specified in the same list.
+	
+	FF/Chrome will just ignore the erroneous property transition but still apply the rest of the valid ones,
+	where as Servo will ignore the whole delcaration entirely.
+	*/
+    transition: 1s width ease-in-out, 1s non-existent-property ease-in-out;  
+    /* ---------------- */
+    background-color: #41CCB4;
+    width: 200px;
+    height: 200px;
+}
+</style>
+
+<script>
+window.addEventListener('load', function() {
+    var d = document.querySelector('div');
+
+    setInterval(() => {
+        d.style.width = '500px';
+    }, 1000);
+    
+});
+</script>
+
+<body>
+<p>
+After a short delay, JavaScript expands the width of the below DIV to 500px.  The width should 'transition' as specified by the CSS. 
+</p>
+<p> However in Servo, when a list of transitions is specified where one of the properties is unrecognised, none of the transitions are applied, regardless of the property.  See source for more info.
+</p>
+<div>
+When the page loads, this DIV should have the width transition to become wider.
+</div>
+</body>
+
+</html>
