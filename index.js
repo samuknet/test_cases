@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
         var link = document.createElement('a'),
             githubLink = document.createElement('a');
 
-        link.href = title;
+        link.href = title + '/index.html';
         link.textContent = title;
         githubLink.href = githubIssueURL;
         githubLink.textContent = 'GitHub Issue';
