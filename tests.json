@@ -11,6 +11,7 @@
 		["opacityImageClip", "Image with opacity gets clipped when nearby text input 'overflows' with characters", "https://github.com/servo/servo/issues/12601"],
 		["imageOpacityHover", "Opacity hover CSS on image not working", "https://github.com/servo/servo/issues/12602"],
 		["fontSizeTransition", "Transition on font size property not working", "https://github.com/servo/servo/issues/12745"],
-		["cssMultipleTransitionsWithInvalidProperty", "Transition with multiple properties do not work when there is one invalid property", "https://github.com/servo/servo/issues/12747"]
+		["cssMultipleTransitionsWithInvalidProperty", "Transition with multiple properties do not work when there is one invalid property", "https://github.com/servo/servo/issues/12747"],
+		["cursorPointerDivText", "CSS cursor:pointer in DIV only working when hovering over div text", ""]
 	]
 }
