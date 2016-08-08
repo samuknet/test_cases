@@ -18,7 +18,7 @@ div {
     transition: 1s left ease-in-out;
 	position: absolute;
 	top: 20%;
-	left: 50%; /* NOTE: The unit here is % */ ;
+	left: 50%; /* The unit here is %.  The JavaScript transitions to a px value which causes the problem. */ ;
     width: 200px;
 }
 </style>
@@ -27,7 +27,7 @@ div {
 window.addEventListener('load', function() {
 	var el = document.querySelector('div');
     setTimeout(() => {
-        el.style.left = '20px'; // Any left value with the 'px' unit here causes the transition not to work and the property just to 'snap' to the new value.
+        el.style.left = '200px'; // Any left value with the 'px' unit here causes the transition not to work and the property just to 'snap' to the '0' value.
     }, 500);
     
 });
@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
 This absolutely positioned div has a transition on the left property. It should animate and transition to the left of the page after 500ms.
 </p>
 <p>
-In Servo, the transition does not run when the transition is between two different unit types. Instead the property just 'snaps' to the new value.  In this case, the left property is being transitioned from 50% to 20px.
+In Servo, the transition does not run when the transition is between two different unit types. Instead the property just 'snaps' to the '0' value.  In this case, the left property is being transitioned from 50% to 200px however this DIV ends up being positioned right up against the left edge of the page.
 </p>
 <p>
 The problem occurs the other way round aswell: attempting to transition from px to % does not work.
