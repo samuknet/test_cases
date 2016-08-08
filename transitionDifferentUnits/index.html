@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>
+CSS Transition between different unit types does not work
+</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+}
+div {
+    border: 1px solid black; 
+    padding: 20px;
+    transition: 1s left ease-in-out;
+	position: absolute;
+	top: 20%;
+	left: 50%; /* NOTE: The unit here is % */ ;
+    width: 200px;
+}
+</style>
+
+<script>
+window.addEventListener('load', function() {
+	var el = document.querySelector('div');
+    setTimeout(() => {
+        el.style.left = '20px'; // Any left value with the 'px' unit here causes the transition not to work and the property just to 'snap' to the new value.
+    }, 500);
+    
+});
+</script>
+
+<body>
+<div>
+<p>
+This absolutely positioned div has a transition on the left property. It should animate and transition to the left of the page after 500ms.
+</p>
+<p>
+In Servo, the transition does not run when the transition is between two different unit types. Instead the property just 'snaps' to the new value.  In this case, the left property is being transitioned from 50% to 20px.
+</p>
+<p>
+The problem occurs the other way round aswell: attempting to transition from px to % does not work.
+</p>
+</div>
+</body>
+
+</html>

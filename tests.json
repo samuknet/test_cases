@@ -12,6 +12,7 @@
 		["imageOpacityHover", "Opacity hover CSS on image not working", "https://github.com/servo/servo/issues/12602"],
 		["fontSizeTransition", "Transition on font size property not working", "https://github.com/servo/servo/issues/12745"],
 		["cssMultipleTransitionsWithInvalidProperty", "Transition with multiple properties do not work when there is one invalid property", "https://github.com/servo/servo/issues/12747"],
-		["fixedDivHitTest", "Hit test on fixed DIV incorrectly offset when page is scrolled", "https://github.com/servo/servo/issues/12763"]
+		["fixedDivHitTest", "Hit test on fixed DIV incorrectly offset when page is scrolled", "https://github.com/servo/servo/issues/12763"],
+		["transitionDifferentUnits", "CSS Transition betwen different unit types does not work", ""]
 	]
 }
