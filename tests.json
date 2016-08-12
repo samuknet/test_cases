@@ -13,6 +13,8 @@
 		["fontSizeTransition", "Transition on font size property not working", "https://github.com/servo/servo/issues/12745"],
 		["cssMultipleTransitionsWithInvalidProperty", "Transition with multiple properties do not work when there is one invalid property", "https://github.com/servo/servo/issues/12747"],
 		["fixedDivHitTest", "Hit test on fixed DIV incorrectly offset when page is scrolled", "https://github.com/servo/servo/issues/12763"],
-		["transitionDifferentUnits", "CSS Transition betwen different unit types does not work", "https://github.com/servo/servo/issues/12765"]
+		["transitionDifferentUnits", "CSS Transition betwen different unit types does not work", "https://github.com/servo/servo/issues/12765"],
+		["iframeOnScrollingPage", "Scrolling down page with IFrame scrolls the IFrame contents", ""]
+
 	]
 }
