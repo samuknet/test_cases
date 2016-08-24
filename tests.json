@@ -15,7 +15,7 @@
 		["fixedDivHitTest", "Hit test on fixed DIV incorrectly offset when page is scrolled", "https://github.com/servo/servo/issues/12763"],
 		["transitionDifferentUnits", "CSS Transition betwen different unit types does not work", "https://github.com/servo/servo/issues/12765"],
 		["iframeOnScrollingPage", "Scrolling down page with IFrame scrolls the IFrame contents", "https://github.com/servo/servo/issues/12827"],
-		["iframeFixedOnScrollingPage", "Scrolling down page with IFrame in fixed div scrolls the IFrame contents", ""],
+		["iframeFixedOnScrollingPage", "Scrolling down page with IFrame in fixed div scrolls the IFrame contents", "https://github.com/servo/servo/issues/13013"],
 		["absoluteDivHyperlinks", "Absolutely positioned div hyperlinks not clickable", "https://github.com/servo/servo/issues/12923"]
 	]
 }
