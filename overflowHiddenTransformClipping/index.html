@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Transform causing clipping with overflow hidden container</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: helvetica;
+    }
+    .container {
+      overflow: hidden;
+      height: 1005px;
+      border: 1px solid black;
+    }
+    .this-gets-clipped {
+      width: 400px;
+      text-align: center;
+      margin: auto;
+      font-size: 200%;
+      margin-top: 490px;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="this-gets-clipped">
+      This text gets clipped
+    </div>
+  </div>
+</body>
+
+</html>

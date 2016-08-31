@@ -16,6 +16,9 @@
 		["transitionDifferentUnits", "CSS Transition betwen different unit types does not work", "https://github.com/servo/servo/issues/12765"],
 		["iframeOnScrollingPage", "Scrolling down page with IFrame scrolls the IFrame contents", "https://github.com/servo/servo/issues/12827"],
 		["absoluteDivHyperlinks", "Absolutely positioned div hyperlinks not clickable", "https://github.com/servo/servo/issues/12923"],
+		["iframeFixedOnScrollingPage", "Scrolling down page with IFrame in fixed div scrolls the IFrame contents", "https://github.com/servo/servo/issues/13013"],
+		["absoluteDivHyperlinks", "Absolutely positioned div hyperlinks not clickable", "https://github.com/servo/servo/issues/12923"],
+		["overflowHiddenTransformClipping", "Transform causing clipping with overflow hidden container", "https://github.com/servo/servo/issues/13053"],
 		["dblclick", "dblclick Event", "https://github.com/servo/servo/issues/12767"]
 	]
 }
