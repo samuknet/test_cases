@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Input 'change' event</title>
+  <script>
+  window.addEventListener('load', function() {
+    document.querySelector('input').addEventListener('change', function() {
+        console.log('Input changed');
+    });
+  });
+  </script>
+</head>
+
+<body>
+    <input type="text" value="Change me" />
+</body>
+
+</html>
