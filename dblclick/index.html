@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<title>DblClick Demo</title>
+<head>
+
+<script>
+	window.addEventListener('load', function() {
+		Array.from(document.querySelectorAll('div')).forEach((div) => {
+			div.addEventListener('dblclick', function() {
+				div.classList.toggle('active');
+			});
+		});
+	});
+</script>
+
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+div {
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	background-color: #D3D3D3;
+}
+
+.inner {
+	display: inline-block;
+	padding: 20px;
+	background-color: #595959;
+}
+
+.block {
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+
+.red {
+	background-color: #c10a15;
+}
+
+.blue {
+	background-color:#365CB5;
+}
+
+.active {
+	border: 3px solid #FFA5F1;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="inner">
+<div class="red block">
+
+</div>
+
+<div class="blue block">
+</div>
+</div>
+</body
+</html>
