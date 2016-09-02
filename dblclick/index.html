@@ -2,8 +2,15 @@
 <html>
 <title>DblClick Demo</title>
 <head>
-
+<meta charset="utf-8" />
 <script>
+	window.addEventListener('click', function() {
+		document.querySelector('.click-display').classList.toggle('visible');
+		setTimeout(function() {
+			document.querySelector('.click-display').classList.toggle('visible');
+		}, 80);
+	});
+
 	window.addEventListener('load', function() {
 		Array.from(document.querySelectorAll('div')).forEach((div) => {
 			div.addEventListener('dblclick', function() {
@@ -14,6 +21,7 @@
 </script>
 
 <style>
+
 * {
 	box-sizing: border-box;
 }
@@ -56,10 +64,25 @@ div {
 	border: 3px solid #FFA5F1;
 }
 
+.click-display {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	visibility: hidden;
+	font-family: helvetica;
+}
+
+.visible {
+	visibility: visible;
+}
 </style>
 </head>
 
 <body>
+<div class="click-display">
+<h1>CLICK!</h1>
+</div>
 <div class="container">
 <div class="inner">
 <div class="red block">

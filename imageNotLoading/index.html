@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Image not loading</title>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            let errorReport = document.getElementById('errorReport');
+
+            // Apply borders to all images in the document when they fire load/error events.
+
+            Array.from(document.querySelectorAll('img'))
+            .forEach((img) => {
+                if (img.complete) { // if image already loaded, mark it as loaded
+                    img.classList.add('loaded');
+                } else { // otherwise listen for its events
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+
+                    img.addEventListener('error', (evt) => {
+                        img.classList.add('error');
+                        var p = document.createElement('p');
+                        p.classList.add('error-report');
+                        p.innerHTML = 'Image with src <i>' + img.getAttribute('src') + '</i> had error evt: <br />' + JSON.stringify(evt);
+
+                        errorReport.appendChild(p);
+                    });
+                }
+            });
+        });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: helvetica, sans;
+        }
+        main {
+            width: 60%;
+            margin: auto;
+            text-align: center;
+        }
+        main img {
+            width: 500px;
+            height: 400px;
+        }
+        main h4 {
+            margin: 2px;
+            padding: 5px;
+        }
+
+        .loading {
+            border: 5px solid orange;
+        }
+
+        .loaded {
+            border: 5px solid #50F702;
+        }
+
+        .error {
+            border: 5px solid red;
+        }
+
+
+        main p {
+            text-align: justify;
+        }
+
+        main p a {
+            color: #365CB5;
+        }
+
+        #errorReport {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #errorReport .error-report {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h4 class="loading">Amber border while image 'loading'</h4>
+        <h4 class="loaded">Green border on load</h4>
+        <h4 class="error">Red border on error</h4>
+        <p>
+            <a href="brokenImage.jpeg">brokenImage.jpeg</a>
+        </p>
+        <img class="loading" src="brokenImage.jpeg" />
+
+        <p>
+        <a href="workingImage.jpeg">workingImage.jpeg</a>
+        </p>
+        <img class="loading" src="workingImage.jpeg" />
+
+     
+
+        <p>
+            <a href="workingImage2.jpeg">workingImage2.jpeg</a>
+        </p>
+        <img class="loading" src="workingImage2.jpeg" />
+
+        <p>
+            The issue occurs just with the first image, 'brokenImage.jpeg', which will not load in Servo.  What is it about this image which means Servo can't load it?
+        </p>
+
+        <p>
+            There are no errors in the Servo console, although the 'error' event is fired on brokenImage.jpeg
+        </p>
+
+    
+        <div id="errorReport">
+            <h3>Image error events will appear in this box when they occur.</h3>
+
+        </div>
+    </main>
+</body>
+</html>
