@@ -21,10 +21,10 @@
 
                     img.addEventListener('error', (evt) => {
                         img.classList.add('error');
+                        // Report the error error
                         var p = document.createElement('p');
                         p.classList.add('error-report');
                         p.innerHTML = 'Image with src <i>' + img.getAttribute('src') + '</i> had error evt: <br />' + JSON.stringify(evt);
-
                         errorReport.appendChild(p);
                     });
                 }
@@ -111,7 +111,7 @@
         </p>
 
         <p>
-            There are no errors in the Servo console, although the 'error' event is fired on brokenImage.jpeg
+            There are no Servo errors, although the 'error' event is fired on the brokenImage.jpeg.
         </p>
 
     
