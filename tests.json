@@ -20,6 +20,7 @@
 		["absoluteDivHyperlinks", "Absolutely positioned div hyperlinks not clickable", "https://github.com/servo/servo/issues/12923"],
 		["overflowHiddenTransformClipping", "Transform causing clipping with overflow hidden container", "https://github.com/servo/servo/issues/13053"],
 		["dblclick", "dblclick Event", "https://github.com/servo/servo/issues/12767"],
-		["changeEvt", "change Event", ""]
+		["changeEvt", "change Event", ""],
+		["nestedScroll", "Nested Scrolling", ""]
 	]
 }
