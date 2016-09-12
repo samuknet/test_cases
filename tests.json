@@ -1,3 +1,4 @@
+
 {
 	"tests": [
 		["iframePropertyToggle", "IFrame visibility property can be set but any subsequent asynchronous updates do not cause a change.", "https://github.com/servo/servo/issues/11891"],
@@ -21,6 +22,8 @@
 		["overflowHiddenTransformClipping", "Transform causing clipping with overflow hidden container", "https://github.com/servo/servo/issues/13053"],
 		["dblclick", "dblclick Event", "https://github.com/servo/servo/issues/12767"],
 		["changeEvt", "change Event", ""],
+		["imageNotLoading", "Image not loading", "https://github.com/servo/servo/issues/13164"],
+		["imageMap", "HTML Image Map Test", "https://github.com/servo/servo/issues/13197"],
 		["nestedScroll", "Nested Scrolling", ""]
 	]
 }
