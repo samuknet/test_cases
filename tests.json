@@ -24,6 +24,7 @@
 		["changeEvt", "change Event", ""],
 		["imageNotLoading", "Image not loading", "https://github.com/servo/servo/issues/13164"],
 		["imageMap", "HTML Image Map Test", "https://github.com/servo/servo/issues/13197"],
-		["nestedScroll", "Nested Scrolling", ""]
+		["nestedScroll", "Nested Scrolling", ""],
+		["negativeLetterSpacingWordSpacing", "Negative CSS letter-spacing and word-spacing values not accepted", "https://github.com/servo/servo/issues/15204"]
 	]
 }
